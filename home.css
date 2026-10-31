@@ -1286,99 +1286,63 @@ body.pp-dark .pp-trust-item > i {
   font-size: 10px;
 }
 
-/* =========================================
-   8. FINAL CTA
-   ========================================= */
 
-.pp-final-cta {
-  background: var(--pp-bg);
+.small-cta {
+    background: #701F35;
+    padding: 40px 7%;
+    border-radius: 12px;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 1150px;
 }
 
-.pp-cta-panel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #701f35;
-  color: #ffffff;
-  max-height: 420px;
+.small-cta-content h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 12px;
 }
 
-.pp-cta-content {
-  position: relative;
-  z-index: 2;
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 25px 15px;
-  text-align: center;
+.small-cta-content h2 span {
+    color: #C0C5CC;
 }
 
-.pp-cta-content h2 {
-  font-size: clamp(34px, 4vw, 52px);
+.small-cta-content p {
+    color: #eee;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 22px;
 }
 
-.pp-cta-content > p {
-  max-width: 650px;
-  margin: 0 auto;
+.small-cta-btn {
+    display: inline-block;
+    background: #C0C5CC;
+    color: #222;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
 }
 
-.pp-cta-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 30px;
+.small-cta-btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+    color: var(--blue);
 }
 
-.pp-btn-cta-outline {
-  border-color: #ffffff;
-  color: #ffffff;
-  background: transparent;
-}
+@media(max-width: 600px) {
+    .small-cta {
+        padding: 30px 20px;
+        margin: 30px 15px;
+    }
 
-.pp-btn-cta-outline:hover {
-  background: #ffffff;
-  color: #701f35;
-}
+    .small-cta-content h2 {
+        font-size: 23px;
+    }
 
-.pp-cta-trust {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px 28px;
-  margin-top: 35px;
-}
-
-.pp-cta-trust span {
-  color: #f1e7ea;
-  font-size: 11px;
-}
-
-.pp-cta-trust b {
-  margin-right: 5px;
-  color: #d7dbe0;
-}
-
-.pp-cta-decoration {
-  position: absolute;
-  width: 270px;
-  height: 270px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.pp-cta-decoration-one {
-  top: -140px;
-  left: -80px;
-}
-
-.pp-cta-decoration-two {
-  right: -100px;
-  bottom: -170px;
-  width: 380px;
-  height: 380px;
+    .small-cta-content p {
+        font-size: 14px;
+    }
 }
 
 /* =========================================
