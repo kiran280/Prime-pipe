@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Service | Prime Pipe</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+    <!-- Theme and RTL Controls -->
+    <div class="header-actions">
+        <button type="button" class="icon-button" id="directionBtn"
+            title="Toggle RTL / LTR" aria-label="Toggle RTL / LTR">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 7h15"></path>
+                <path d="M4 7l3-3"></path>
+                <path d="M4 7l3 3"></path>
+                <path d="M20 17H5"></path>
+                <path d="M20 17l-3-3"></path>
+                <path d="M20 17l-3 3"></path>
+            </svg>
+        </button>
+
+        <button type="button" class="icon-button" id="themeBtn"
+            title="Toggle Dark / Light Mode" aria-label="Toggle Dark / Light Mode">
+
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.42 1.42"></path>
+                <path d="m17.65 17.65 1.42 1.42"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.35 17.65-1.42 1.42"></path>
+                <path d="m19.07 4.93-1.42 1.42"></path>
+            </svg>
+
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3A7 7 0 0 0 21 12.8Z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <main class="pp-booking-wrapper">
+
+        <div class="pp-booking-container">
+
+            <!-- Brand -->
+            <a href="index.html" class="pp-booking-brand">
+                <img src="images/logo.png" alt="Prime Pipe Logo">
+
+                <div class="pp-brand-content">
+                    <h2>Prime <strong>Pipe</strong></h2>
+                    <p>Quality You Can Count On.</p>
+                </div>
+            </a>
+
+            <!-- Heading -->
+            <div class="pp-booking-heading">
+                <span>BOOK AN APPOINTMENT</span>
+                <h1>Schedule Your Service</h1>
+                <p>
+                    Tell us what you need, and our professional team
+                    will help you get it fixed.
+                </p>
+            </div>
+
+            <!-- Booking Form -->
+            <form class="pp-booking-form" id="ppBookingForm">
+
+                <div class="pp-form-grid">
+
+                    <div class="pp-form-group">
+                        <label for="ppName">Full Name *</label>
+                        <input type="text" id="ppName" name="name"
+                            placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="pp-form-group">
+                        <label for="ppPhone">Phone Number *</label>
+                        <input type="tel" id="ppPhone" name="phone"
+                            placeholder="Enter phone number"
+                            pattern="[0-9+\-\s]{7,15}" required>
+                    </div>
+
+                    <div class="pp-form-group">
+                        <label for="ppEmail">Email Address *</label>
+                        <input type="email" id="ppEmail" name="email"
+                            placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="pp-form-group">
+                        <label for="ppService">Select Service *</label>
+                        <select id="ppService" name="service" required>
+                            <option value="">Choose a service</option>
+                            <option value="Pipe Repair">Pipe Repair</option>
+                            <option value="Drain Unblocking">Drain Unblocking</option>
+                            <option value="Tap Replacement">Tap Replacement</option>
+                            <option value="Water Tank Cleaning">Water Tank Cleaning</option>
+                            <option value="Other Plumbing Services">Other Plumbing Services</option>
+                        </select>
+                    </div>
+
+                    <div class="pp-form-group">
+                        <label for="ppDate">Preferred Date *</label>
+                        <input type="date" id="ppDate" name="date" required>
+                    </div>
+
+                    <div class="pp-form-group">
+                        <label for="ppTime">Preferred Time *</label>
+                        <select id="ppTime" name="time" required>
+                            <option value="">Choose a time</option>
+                            <option value="09:00 AM">09:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="01:00 PM">01:00 PM</option>
+                            <option value="02:00 PM">02:00 PM</option>
+                            <option value="03:00 PM">03:00 PM</option>
+                            <option value="04:00 PM">04:00 PM</option>
+                            <option value="05:00 PM">05:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="pp-form-group pp-full-width">
+                        <label for="ppAddress">Complete Address *</label>
+                        <textarea id="ppAddress" name="address"
+                            placeholder="Enter your complete address"
+                            rows="3" required></textarea>
+                    </div>
+
+                    <div class="pp-form-group pp-full-width">
+                        <label for="ppMessage">Additional Details</label>
+                        <textarea id="ppMessage" name="message"
+                            placeholder="Describe your plumbing issue..."
+                            rows="3"></textarea>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="pp-booking-submit">
+                    Book Your Service
+                </button>
+
+                <p class="pp-booking-note">
+                    Our team will contact you to confirm your appointment.
+                </p>
+
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const body = document.body;
+        const themeBtn = document.getElementById("themeBtn");
+        const directionBtn = document.getElementById("directionBtn");
+
+        // Apply saved theme
+        const savedTheme = localStorage.getItem("aquascape-theme");
+
+        if (savedTheme === "dark") {
+            body.classList.add("dark");
+        }
+
+        // Theme toggle
+        themeBtn.addEventListener("click", function () {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                localStorage.setItem("aquascape-theme", "dark");
+            } else {
+                localStorage.setItem("aquascape-theme", "light");
+            }
+        });
+
+        // Apply saved direction
+        const savedDirection = localStorage.getItem("aquascape-direction");
+
+        document.documentElement.dir =
+            savedDirection === "rtl" ? "rtl" : "ltr";
+
+        // RTL toggle
+        directionBtn.addEventListener("click", function () {
+            if (document.documentElement.dir === "ltr") {
+                document.documentElement.dir = "rtl";
+                localStorage.setItem("aquascape-direction", "rtl");
+            } else {
+                document.documentElement.dir = "ltr";
+                localStorage.setItem("aquascape-direction", "ltr");
+            }
+        });
+
+        // Set minimum booking date to today
+        const dateInput = document.getElementById("ppDate");
+
+        function setMinimumDate() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, "0");
+            const day = String(today.getDate()).padStart(2, "0");
+
+            dateInput.min = `${year}-${month}-${day}`;
+        }
+
+        setMinimumDate();
+
+        // Booking form submission
+        document.getElementById("ppBookingForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!this.checkValidity()) {
+                this.reportValidity();
+                return;
+            }
+
+            const bookingDetails = {
+                name: document.getElementById("ppName").value,
+                phone: document.getElementById("ppPhone").value,
+                email: document.getElementById("ppEmail").value,
+                service: document.getElementById("ppService").value,
+                date: document.getElementById("ppDate").value,
+                time: document.getElementById("ppTime").value,
+                address: document.getElementById("ppAddress").value,
+                message: document.getElementById("ppMessage").value
+            };
+
+            console.log("Booking Details:", bookingDetails);
+
+            alert("Thank you! Your booking request has been submitted.");
+
+            this.reset();
+            setMinimumDate();
+        });
+    </script>
+
+</body>
+</html>
